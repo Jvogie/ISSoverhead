@@ -5,8 +5,8 @@ import time
 
 while True:
     time.sleep(60)
-    MY_LAT = 40.712776
-    MY_LONG = -74.005974
+    MY_LAT = 
+    MY_LONG = 
 
     response = requests.get(url="http://api.open-notify.org/iss-now.json")
     response.raise_for_status()
@@ -41,10 +41,10 @@ while True:
     if 35 <= iss_latitude <= 46 and -79<= iss_longitude <= -68:
         if time_now >= sunset or time_now <=sunrise:
             with smtplib.SMTP("smtp.gmail.com", port=587) as connect:
-                my_email = "thisisminnecloud@gmail.com"
+                my_email = ""
                 connect.starttls()
-                connect.login(user=my_email, password="euwslpvcyeyvdgnz")
+                connect.login(user=my_email, password="")
 
-                connect.sendmail(from_addr=my_email, to_addrs="jdvogel1@gmail.com",
+                connect.sendmail(from_addr=my_email, to_addrs="",
                                  msg=f"ISS is over head!\n\n Its current position is lat:{iss_latitude}, "
                                      f"lgt:{iss_longitude}")
